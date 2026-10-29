@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --app-bg: #fafafa;
+  --app-fg: #18181b;
+}
+
+[data-theme="dark"] {
+  --app-bg: #18181b;
+  --app-fg: #fafafa;
+}
+
+@theme inline {
+  --color-app-bg: var(--app-bg);
+  --color-app-fg: var(--app-fg);
+}
+
+/* 禁用 View Transitions 默认的淡入淡出动画 */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
